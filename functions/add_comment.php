@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $content = mysqli_real_escape_string($con, $_POST['comment']); 
     
     // Insert comment into database
-    $sql = "INSERT INTO comments (post_id, user_id, comment_text, created_at) 
+    $sql = "INSERT INTO Comments (post_id, user_id, comment_text, created_at) 
             VALUES ('$post_id', '$user_id', '$content', NOW())"; 
     if (mysqli_query($con, $sql)) {
         // Redirect back to post page

@@ -342,8 +342,8 @@
                         <?php
                         // Fetch comments for this post
                         $comments_query = "SELECT c.*, u.fname, u.lname
-                                         FROM comments c 
-                                         LEFT JOIN users u ON c.user_id = u.user_id 
+                                         FROM Comments c 
+                                         LEFT JOIN Users u ON c.user_id = u.user_id 
                                          WHERE c.post_id = '$postid' 
                                          ORDER BY c.created_at DESC";
                         $comments_result = mysqli_query($con, $comments_query);
@@ -380,9 +380,9 @@
             } else {
                 // All posts display
                 $query = "SELECT p.*, u.fname, u.lname, 
-                         (SELECT COUNT(*) FROM comments WHERE post_id = p.post_id) as comment_count 
-                         FROM posts p 
-                         LEFT JOIN users u ON p.user_id = u.user_id 
+                         (SELECT COUNT(*) FROM Comments WHERE post_id = p.post_id) as comment_count 
+                         FROM Posts p 
+                         LEFT JOIN Users u ON p.user_id = u.user_id 
                          ORDER BY created_at DESC";
                 $result = mysqli_query($con, $query);
 

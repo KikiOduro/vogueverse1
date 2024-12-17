@@ -8,7 +8,7 @@ if (!isset($_GET['pid'])) {
 }
 
 $post_id = $_GET['pid'];
-$query = "SELECT * FROM posts WHERE post_id = ?";
+$query = "SELECT * FROM Posts WHERE post_id = ?";
 $stmt = $con->prepare($query);
 $stmt->bind_param("i", $post_id);
 $stmt->execute();

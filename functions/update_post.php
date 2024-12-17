@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = $_POST['title'];
     $content = $_POST['content'];
     
-    $query = "UPDATE posts SET title = ?, content = ? WHERE post_id = ?";
+    $query = "UPDATE Posts SET title = ?, content = ? WHERE post_id = ?";
     $stmt = $con->prepare($query);
     $stmt->bind_param("ssi", $title, $content, $post_id);
     
