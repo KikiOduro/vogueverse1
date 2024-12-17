@@ -127,7 +127,7 @@ require('../../functions/get_username.php');
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" name="submit" class="submit-btn">Add Post</button>
+                            <input type="submit" name="submit" value="Add Post" class="submit-btn">
                             <a href="manage_posts.php" class="cancel-btn">Cancel</a>
                         </div>
                     </div>
@@ -135,5 +135,13 @@ require('../../functions/get_username.php');
             </div>
         </div>
     </div>
+
+    <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        // e.preventDefault(); // Uncomment this line to prevent form submission for testing
+        console.log('Form submitted');
+        console.log('Form data:', new FormData(this));
+    });
+    </script>
 </body>
 </html>
