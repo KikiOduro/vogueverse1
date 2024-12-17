@@ -133,7 +133,7 @@
         require_once 'settings/connection.php';
         
         // Fetch posts from database
-        $query = "SELECT * FROM posts ORDER BY created_at DESC LIMIT 6";
+        $query = "SELECT * FROM Posts ORDER BY created_at DESC LIMIT 6";
         $result = mysqli_query($con, $query);
         
         // Loop through posts

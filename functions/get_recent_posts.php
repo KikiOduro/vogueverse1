@@ -16,7 +16,7 @@ function getRecentPosts()
         p.content, 
         p.created_at
     FROM 
-        posts p
+        Posts p
     WHERE 
         p.user_id = '$user_id'
     ORDER BY 

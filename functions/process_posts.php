@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
     try {
         // Prepare SQL statement
-        $query = "INSERT INTO posts (user_id, title, content, image_url) VALUES (?, ?, ?, ?)";
+        $query = "INSERT INTO Posts (user_id, title, content, image_url) VALUES (?, ?, ?, ?)";
         $stmt = $con->prepare($query);
         
         // Execute with parameters

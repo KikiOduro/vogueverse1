@@ -298,8 +298,8 @@
                 // Single post display
                 $postid = mysqli_real_escape_string($con, $_GET['postid']);
                 $query = "SELECT p.*, u.fname, u.lname
-                         FROM posts p 
-                         LEFT JOIN users u ON p.user_id = u.user_id 
+                         FROM Posts p 
+                         LEFT JOIN Users u ON p.user_id = u.user_id 
                          WHERE p.post_id = '$postid'";
                 $result = mysqli_query($con, $query);
 
