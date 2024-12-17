@@ -287,6 +287,7 @@
 <body>
     <header class="header">
         <h1>VogueVerse</h1>
+        <a href="../index.php" style="padding-left: 90px;">Go back to homepage</a>
     </header>
 
     <div class="main-container">
